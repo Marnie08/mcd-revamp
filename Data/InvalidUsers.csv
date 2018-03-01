@@ -1,0 +1,6 @@
+mnaguas@yahoo.com,TestPassword!,Login Failure: Unknown User.
+mnaguas@yahoo.com,Welcome1,Login Failure: Unknown User.
+Clarence.campilan@ul.com,TestPassword!,Login Failure: The User Name or Password is incorrect!
+#BLANK,#BLANK,Login Failure: Both UserName and Password is required
+Clarence.campilan@ul.com,#BLANK,Login Failure: The User Name or Password is incorrect!
+#BLANK,Welcome1,Login Failure: Both UserName and Password is required

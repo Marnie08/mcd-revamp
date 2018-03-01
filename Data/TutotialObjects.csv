@@ -1,0 +1,2 @@
+css=#carousel-example-generic > div > div.item.active > div.carousel-caption > div:nth-child(1) > a.btn.btn-lg.btn-danger,Skip,Skip_Button
+css=#carousel-example-generic > div > div.item.active > div.carousel-caption > div:nth-child(1) > a.btn.btn-lg.btn-success,Next,Next_Button
