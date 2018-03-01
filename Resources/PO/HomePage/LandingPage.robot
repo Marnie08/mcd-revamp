@@ -1,9 +1,10 @@
 *** Settings ***
 Documentation  This Homepage page object contains keywords for the landing page.
+#######################################################################################################################
 #       Author:  Marnie Aguas
 #       Date:  February 28, 2018
 #       Revision History:
-
+#######################################################################################################################
 Library  SeleniumLibrary
 
 
@@ -15,13 +16,13 @@ ${LANDING_PAGE_CONTACT}     css=body > div > div > div.col-md-12 > div.login > d
 *** Keywords ***
 #Load The Landing Page
 Chrome Landing Page
-    go to  ${URL.${ENVIRONMENT}}
+    Go To  ${URL.${ENVIRONMENT}}
 
 Internet Explorer Landing Page
-    go to  ${URL.${ENVIRONMENT}}
+    Go To  ${URL.${ENVIRONMENT}}
 
 Firefox Landing Page
-    go to  ${URL.${ENVIRONMENT}}
+    Go To  ${URL.${ENVIRONMENT}}
 
 Load Landing Page
     Run Keyword If      '${BROWSER}' == 'chrome'      Chrome Landing Page
