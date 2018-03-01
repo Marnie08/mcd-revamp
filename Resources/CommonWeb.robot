@@ -19,7 +19,7 @@ Begin Web Test
     ...     ELSE IF     '${BROWSER}' == 'IE'          Open Internet Explorer to Page
 
 End Web Test
-   close browser
+   Close Browser
 
 
 Open Chrome Browser to Page
