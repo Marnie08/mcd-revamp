@@ -1,8 +1,10 @@
 *** Settings ***
 Documentation  This page object contains the keywords common to all test suites within the project.
+#######################################################################################################################
 #       Author:  Marnie Aguas
 #       Date:  February 28, 2018
 #       Revision History:
+#######################################################################################################################
 
 Library  Collections
 Library  SeleniumLibrary
