@@ -45,7 +45,7 @@ User should be able to login with valid credentials
 
 Admin User should be able to login with valid ADMIN login credentials.
     [Documentation]  Test Suite 3
-    [Tags]  TestAdmin
+    [Tags]  TestAdmin  Sample1
     McdRevampApp.Login With Valid Login Credentials Input Data  ${ADMIN_USER}
     McdRevampApp.Redirect To Admin Knowledge Hub
 
