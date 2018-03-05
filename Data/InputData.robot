@@ -22,3 +22,8 @@ ${VALID_CREDENTIALS_PATH_CSV}  C:\\development\\robot-scripts\\mcd-revamp\\Data\
 
 #Landing Page Banner
 ${LANDING_PAGE_BANNER}      Welcome to McDonald’s
+
+#Tutorial Splash Screen Objects
+${TUTORIAL_TILDE3}          xpath=//*[@id="carousel-example-generic"]/ol/li[3]
+${TUTORIAL_CANCEL_BTN}      xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/p/a[1]
+${TUTORIAL_FINISH_BTN}      xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/p/a[2]

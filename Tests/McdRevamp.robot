@@ -19,6 +19,7 @@ Test Teardown  CommonWeb.End Web Test
 # robot -d results/invalidExt -i InvalidExternal -v BROWSER:chrome -v ENVIRONMENT:qa Tests/McdRevamp.robot
 # robot -d results/validCredentials6 -i ValidCredentials -v BROWSER:chrome -v ENVIRONMENT:qa Tests/McdRevamp.robot
 # robot -d results/PopupIE -i ValidCredentials -v BROWSER:ie -v ENVIRONMENT:qa Tests/McdRevamp.robot
+# robot -d results/ValidLogin -i Sample1 -v BROWSER:chrome -v ENVIRONMENT:qa Tests/McdRevamp.robot
 
 *** Variables ***
 
