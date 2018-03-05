@@ -9,6 +9,8 @@ Documentation  This page object contains keywords within the Mc Donalds Knowledg
 
 Resource  ./PO/HomePage/LandingPage.robot
 Resource  ./PO/HomePage/SignIn.robot
+Resource  ./PO/TutorialPage/SplashScreen.robot
+Resource  ./PO/KnowledgeHub/KnowledgeHubPageRegU.robot
 
 *** Variables ***
 
@@ -129,10 +131,9 @@ Admin Sign Out
 #Tutorial
 ####################################################################################################################
 Redirect To Tutorial
-    Sleep  45s
-    Wait Until Element Is Visible  css=#carousel-example-generic
-    Log  Regular User
-
+    SplashScreen.Tutorial Page Redirection
+    SplashScreen.Regular User Skipping Tutorial
+    KnowledgeHubPageRegU.Regular User Sign Out
 
 #Login with valid credentials
 Login To The Site
