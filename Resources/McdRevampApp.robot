@@ -6,7 +6,6 @@ Documentation  This page object contains keywords within the Mc Donalds Knowledg
 #       Revision History:
 #######################################################################################################################
 
-
 Resource  ./PO/HomePage/LandingPage.robot
 Resource  ./PO/HomePage/SignIn.robot
 Resource  ./PO/TutorialPage/SplashScreen.robot
