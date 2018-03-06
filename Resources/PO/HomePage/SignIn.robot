@@ -9,13 +9,6 @@ Documentation  This Homepage page object contains keywords about the page's Logi
 Library  SeleniumLibrary
 
 *** Variables ***
-${SIGN_IN_USERNAME_FIELD}       css=#PlaceHolderMain_Login2_UserName
-${SIGN_IN_PASSWORD}             css=#PlaceHolderMain_Login2_Password
-${SIGN_IN_SUBMIT}               css=#SubmitLogin
-${SIGN_IN_FORGOT_PASSWORD}      css=#PlaceHolderMain_Login2_ForgotPassword1_forgotPasswordTextLbl
-${SIGN_IN_NEW_USER}             css=#LoginContainers > div:nth-child(3) > button
-${SIGN_IN_LOGO}                 css=body > div > div > div.col-md-12 > div.login > div.col-md-4.col-xs-12.login-form.text-center > div.login-logo
-
 
 *** Keywords ***
 # Sign In Panel form objects validation

@@ -25,6 +25,14 @@ ${LANDING_PAGE_BANNER}                 Welcome to McDonald’s
 ${LANDING_PAGE_LABEL}                  css=body > div > div > div.col-md-12 > div.login > div.col-md-8.col-xs-12.login-hero > h4
 ${LANDING_PAGE_CONTACT}                css=body > div > div > div.col-md-12 > div.login > div.col-md-8.col-xs-12.login-hero > p
 
+${SIGNIN_FORGOT_PASSWORD}              xpath=//*[@id="fpLink"]
+${SIGN_IN_USERNAME_FIELD}              css=#PlaceHolderMain_Login2_UserName
+${SIGN_IN_PASSWORD}                    css=#PlaceHolderMain_Login2_Password
+${SIGN_IN_SUBMIT}                      css=#SubmitLogin
+${SIGN_IN_FORGOT_PASSWORD}             css=#PlaceHolderMain_Login2_ForgotPassword1_forgotPasswordTextLbl
+${SIGN_IN_NEW_USER}                    css=#LoginContainers > div:nth-child(3) > button
+${SIGN_IN_LOGO}                        css=body > div > div > div.col-md-12 > div.login > div.col-md-4.col-xs-12.login-form.text-center > div.login-logo
+
 #Forgot Password Container
 ${FORGOT_PASSWORD_POPUP}               xpath=//*[@id="forgotPasswordContainer"]
 ${FORGOT_PASSWORD_TEXTBOX}             xpath=//*[@id="PlaceHolderMain_Login2_ForgotPassword1_txtEmail"]
