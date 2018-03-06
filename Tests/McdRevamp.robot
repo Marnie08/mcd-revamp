@@ -24,6 +24,9 @@ Test Teardown  CommonWeb.End Web Test
 *** Variables ***
 
 *** Test Cases ***
+#######################################################################################################################
+#   VAIDATIONS
+#######################################################################################################################
 Logged out user should be able to load the Mc Donalds Homepage.
     [Documentation]  Test Suite 1
     [Tags]  Test0
@@ -35,6 +38,8 @@ Logged out user should be able to navigate the Mc Donalds Homepage.
     McdRevampApp.Navigate The Homepage
     McdRevampApp.Validate Landing Page Banners
     McdRevampApp.Validate The Login Panel
+    McdRevampApp.Validate Forgot Password Facility
+
 
 User should see correct error message with invalid login credentials
     [Tags]  InvalidCredentials
@@ -57,3 +62,15 @@ Regular User should be able to login with valid Regular User login credentials.
     [Tags]  TestRegStd  Sample1
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
+    McdRevampApp.Finish Tutorial
+    McdRevampApp.Regular User Logout
+
+Regular User should be able to view "Main Tutorial Page" every successful login.
+    [Documentation]  Test Suite 4
+    [Tags]  TutorialCancel  Sample1
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
+    McdRevampApp.Redirect To Tutorial
+    McdRevampApp.Cancelling Non-display Of Tutorial
+    McdRevampApp.Finish Tutorial
+    McdRevampApp.Regular User Logout
+

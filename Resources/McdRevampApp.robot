@@ -5,6 +5,7 @@ Documentation  This page object contains keywords within the Mc Donalds Knowledg
 #       Date:  February 28, 2018
 #       Revision History:
 #######################################################################################################################
+Library  SeleniumLibrary
 
 Resource  ./PO/HomePage/LandingPage.robot
 Resource  ./PO/HomePage/SignIn.robot
@@ -29,6 +30,10 @@ Validate Landing Page Banners
 Validate The Login Panel
     SignIn.Validate Login Panel
 
+Validate Forgot Password Facility
+    ForgotPassword.Forgot Password Validation
+    ForgotPasswrod.Close Forgot Password PopUp
+
 ####################################################################################################################
 #Login with invalid credentials
 #   #Version 1 - External Data Source
@@ -37,7 +42,7 @@ Login With Many Invalid Credentials
     [Arguments]  ${InvalidLoginScenarios}
     :FOR  ${LoginScenario}  IN  @{InvalidLoginScenarios}
     \  Navigate The Homepage
-    \  Attempt Login CSV File  ${LoginScenario}
+    \  Attempt Login CVS File  ${LoginScenario}
     \  Verify Login Page Error Message  ${LoginScenario}
 
     #Version 2 - Built In Data Source - Template
@@ -64,16 +69,21 @@ Login With Valid Credentials
 ####################################################################################################################
 #Login with valid User Credentials - Any Type of User
 ####################################################################################################################
+#        CSV FILE
+####################################################################################################################
 Login With Valid Login Credentials CSV File
     [Arguments]  ${Credentials}
     Navigate The Homepage
     Attempt Login CSV File  ${Credentials}
 
-Attempt Login CVS File
+Attempt Login CSV File
     [Arguments]  ${Credentials}
     SignIn.Enter Credentials Via CSV File  ${Credentials}
     SignIn.Click Submit
 
+#####################################################################################################################
+#        INPUT DATA
+#####################################################################################################################
 Login With Valid Login Credentials Input Data
     [Arguments]  ${Credentials}
     Navigate The Homepage
@@ -126,8 +136,18 @@ Redirect To Admin Knowledge Hub
 ####################################################################################################################
 Redirect To Tutorial
     SplashScreen.Tutorial Page Redirection
+
+Cancelling Non-display Of Tutorial
+    SplashScreen.Clicking Cancel
+
+Finish Tutorial
     SplashScreen.Regular User Skipping Tutorial
+
+Regular User Logout
     KnowledgeHubPageRegU.Regular User Sign Out
+
+
+
 
 #Login with valid credentials
 Login To The Site

@@ -10,6 +10,11 @@ Library  SeleniumLibrary
 *** Variables ***
 
 *** Keywords ***
+Forgot Password Validation
+    Clicking Forgot Password
+    Validate Loaded Forgot Password
+
+
 Clicking Forgot Password
     Click Link  ${SIGNIN_FORGOT_PASSWORD}
 
@@ -19,3 +24,5 @@ Validate Loaded Forgot Password
     :FOR  ${ForgotPObject}  IN  @{FORGOTP_ELEMENTS}
     \  Page Should Contain Element  ${ForgotPObject}
 
+Close Forgot Password PopUp
+    Click Element  ${FORGOT_PASSWORD_CLOSE}

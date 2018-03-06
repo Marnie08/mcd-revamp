@@ -24,5 +24,9 @@ Regular User Skipping Tutorial
 
 
 Clicking Cancel
+    Wait Until Page Contains Element  ${TUTORIAL_DOT3}
+    Click Element  ${TUTORIAL_DOT3}
+    Wait Until Element Is Visible  ${TUTORIAL_NEVER_BOX}
+    Click Element  ${TUTORIAL_NEVER_BOX}
     Wait Until Element Is Visible  ${TUTORIAL_CANCEL_BTN}
     Click Element  ${TUTORIAL_CANCEL_BTN}

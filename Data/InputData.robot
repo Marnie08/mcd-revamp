@@ -37,6 +37,7 @@ ${SIGN_IN_LOGO}                        css=body > div > div > div.col-md-12 > di
 ${FORGOT_PASSWORD_POPUP}               xpath=//*[@id="forgotPasswordContainer"]
 ${FORGOT_PASSWORD_TEXTBOX}             xpath=//*[@id="PlaceHolderMain_Login2_ForgotPassword1_txtEmail"]
 ${FORGOT_PASSWORD_SUBMIT_BTN}          xpath=//*[@id="PlaceHolderMain_Login2_ForgotPassword1_Submit"]
+${FORGOT_PASSWORD_CLOSE}               xpath=//*[@id="forgotPasswordContainer"]/div[1]
 
 #Tutorial Splash Screen Objects
 ${TUTORIAL_DOT1}
@@ -44,3 +45,4 @@ ${TUTORIAL_DOT2}
 ${TUTORIAL_DOT3}                       xpath=//*[@id="carousel-example-generic"]/ol/li[3]
 ${TUTORIAL_CANCEL_BTN}                 xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/p/a[1]
 ${TUTORIAL_FINISH_BTN}                 xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/p/a[2]
+${TUTORIAL_NEVER_BOX}                  xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/label[2]/input
