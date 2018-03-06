@@ -14,6 +14,8 @@ Forgot Password Validation
     Clicking Forgot Password
     Validate Loaded Forgot Password
 
+Close Forgot Password PopUp
+    Close PopUp
 
 Clicking Forgot Password
     Click Link  ${SIGNIN_FORGOT_PASSWORD}
@@ -24,5 +26,7 @@ Validate Loaded Forgot Password
     :FOR  ${ForgotPObject}  IN  @{FORGOTP_ELEMENTS}
     \  Page Should Contain Element  ${ForgotPObject}
 
-Close Forgot Password PopUp
+Close PopUp
+    Page Should Contain Element  ${FORGOT_PASSWORD_CLOSE}
+    Wait Until Element Is Visible  ${FORGOT_PASSWORD_CLOSE}
     Click Element  ${FORGOT_PASSWORD_CLOSE}

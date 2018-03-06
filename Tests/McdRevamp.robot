@@ -29,37 +29,37 @@ Test Teardown  CommonWeb.End Web Test
 #######################################################################################################################
 Logged out user should be able to load the Mc Donalds Homepage.
     [Documentation]  Test Suite 1
-    [Tags]  Test0
+    [Tags]  Test1
     McdRevampApp.Navigate The Homepage
 
 Logged out user should be able to navigate the Mc Donalds Homepage.
     [Documentation]  Test Suite 2
-    [Tags]  Test1
+    [Tags]  ForgotPassword
     McdRevampApp.Navigate The Homepage
     McdRevampApp.Validate Landing Page Banners
     McdRevampApp.Validate The Login Panel
     McdRevampApp.Validate Forgot Password Facility
-
 
 User should see correct error message with invalid login credentials
     [Tags]  InvalidCredentials
     ${InvalidLoginScenarios}  DataManager.Get Csv Data  ${INVALID_CREDENTIALS_PATH_CSV}
     McdRevampApp.Login With Many Invalid Credentials  ${InvalidLoginScenarios}
 
-User should be able to login with valid credentials
-    [Tags]  ValidCredentials
-    ${ValidLoginScenarios}  DataManager.Get Csv Data  ${VALID_CREDENTIALS_PATH_CSV}
-    McdRevampApp.Login With Valid Credentials  ${ValidLoginScenarios}
+#User should be able to login with valid credentials
+   # [Tags]  ValidCredentials
+   # ${ValidLoginScenarios}  DataManager.Get Csv Data  ${VALID_CREDENTIALS_PATH_CSV}
+   # McdRevampApp.Login With Valid Credentials  ${ValidLoginScenarios}
 
 Admin User should be able to login with valid ADMIN login credentials.
     [Documentation]  Test Suite 3
     [Tags]  TestAdmin  Sample1
     McdRevampApp.Login With Valid Login Credentials Input Data  ${ADMIN_USER}
     McdRevampApp.Redirect To Admin Knowledge Hub
+    McdRevampApp.Admin Logout
 
 Regular User should be able to login with valid Regular User login credentials.
     [Documentation]  Test Suite 3
-    [Tags]  TestRegStd  Sample1
+    [Tags]  TestRegStd  Sample2
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Finish Tutorial
@@ -67,10 +67,13 @@ Regular User should be able to login with valid Regular User login credentials.
 
 Regular User should be able to view "Main Tutorial Page" every successful login.
     [Documentation]  Test Suite 4
-    [Tags]  TutorialCancel  Sample1
+    [Tags]  TutorialCancel  Sample2
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Cancelling Non-display Of Tutorial
     McdRevampApp.Finish Tutorial
     McdRevampApp.Regular User Logout
 
+#Main Tutorial Page should not be shown if "Never show this again" is ticked.
+#    [Documentation]  Test Suite 5
+#    [Tags]  TutorialCancel  Sample2

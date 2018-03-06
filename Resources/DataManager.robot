@@ -8,7 +8,6 @@ Documentation  Use this layer in getting data from an external CSV file
 
 Library  ../CustomLibs/Csv.py
 
-
 *** Keywords ***
 Get CSV Data
     [Arguments]  ${FilePath}

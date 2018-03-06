@@ -9,6 +9,7 @@ Library  SeleniumLibrary
 
 Resource  ./PO/HomePage/LandingPage.robot
 Resource  ./PO/HomePage/SignIn.robot
+Resource  ./PO/HomePage/ForgotPassword.robot
 Resource  ./PO/TutorialPage/SplashScreen.robot
 Resource  ./PO/KnowledgeHub/KnowledgeHubPageRegU.robot
 Resource  ./PO/KnowledgeHub/KnowledgeHubPageAdmin.robot
@@ -32,7 +33,7 @@ Validate The Login Panel
 
 Validate Forgot Password Facility
     ForgotPassword.Forgot Password Validation
-    ForgotPasswrod.Close Forgot Password PopUp
+    ForgotPassword.Close Forgot Password PopUp
 
 ####################################################################################################################
 #Login with invalid credentials
@@ -42,7 +43,7 @@ Login With Many Invalid Credentials
     [Arguments]  ${InvalidLoginScenarios}
     :FOR  ${LoginScenario}  IN  @{InvalidLoginScenarios}
     \  Navigate The Homepage
-    \  Attempt Login CVS File  ${LoginScenario}
+    \  Attempt Login CSV File  ${LoginScenario}
     \  Verify Login Page Error Message  ${LoginScenario}
 
     #Version 2 - Built In Data Source - Template
@@ -129,7 +130,16 @@ Valid Regular User Redirection
 ####################################################################################################################
 Redirect To Admin Knowledge Hub
     KnowledgeHubPageAdmin.Admin Knowledge Hub Redirection
+
+Admin Logout
     KnowledgeHubPageAdmin.Admin Sign Out
+
+####################################################################################################################
+#Knowledge Hub - Regular User
+####################################################################################################################
+Regular User Logout
+    KnowledgeHubPageRegU.Regular User Sign Out
+
 
 ####################################################################################################################
 #Tutorial
@@ -143,8 +153,7 @@ Cancelling Non-display Of Tutorial
 Finish Tutorial
     SplashScreen.Regular User Skipping Tutorial
 
-Regular User Logout
-    KnowledgeHubPageRegU.Regular User Sign Out
+
 
 
 
