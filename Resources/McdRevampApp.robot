@@ -10,6 +10,7 @@ Resource  ./PO/HomePage/LandingPage.robot
 Resource  ./PO/HomePage/SignIn.robot
 Resource  ./PO/TutorialPage/SplashScreen.robot
 Resource  ./PO/KnowledgeHub/KnowledgeHubPageRegU.robot
+Resource  ./PO/KnowledgeHub/KnowledgeHubPageAdmin.robot
 
 *** Variables ***
 
@@ -117,14 +118,8 @@ Valid Regular User Redirection
 #Knowledge Hub - Admin
 ####################################################################################################################
 Redirect To Admin Knowledge Hub
-    Sleep  45s
-    Wait Until Page Contains Element  css=#myCarousel > div
-    Admin Sign Out
-    Log  Admin User
-
-Admin Sign Out
-    Click Link  css=#bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > li.dropdown.nav-useraccount > a
-    Click Link  Log out
+    KnowledgeHubPageAdmin.Admin Knowledge Hub Redirection
+    KnowledgeHubPageAdmin.Admin Sign Out
 
 ####################################################################################################################
 #Tutorial

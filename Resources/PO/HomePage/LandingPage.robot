@@ -9,9 +9,7 @@ Library  SeleniumLibrary
 
 
 *** Variables ***
-${LANDING_PAGE_BANNER}      Welcome to McDonald’s
-${LANDING_PAGE_LABEL}       css=body > div > div > div.col-md-12 > div.login > div.col-md-8.col-xs-12.login-hero > h4
-${LANDING_PAGE_CONTACT}     css=body > div > div > div.col-md-12 > div.login > div.col-md-8.col-xs-12.login-hero > p
+
 
 *** Keywords ***
 #Load The Landing Page

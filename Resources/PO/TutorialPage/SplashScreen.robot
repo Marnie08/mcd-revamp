@@ -17,8 +17,8 @@ Tutorial Page Redirection
 
 
 Regular User Skipping Tutorial
-    Wait Until Page Contains Element  css=#carousel-example-generic > ol > li:nth-child(3)
-    Click Element  ${TUTORIAL_TILDE3}
+    Wait Until Page Contains Element  ${TUTORIAL_DOT3}
+    Click Element  ${TUTORIAL_DOT3}
     Wait Until Element Is Visible  ${TUTORIAL_FINISH_BTN}
     Click Element  ${TUTORIAL_FINISH_BTN}
 
