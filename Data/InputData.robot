@@ -3,8 +3,8 @@
 ${ENVIRONMENT}                         qa
 ${BROWSER}                             IE
 &{URL}                                 qa=https://qalogin.ulscm.com/RPUI/cpsmcd/signin.aspx?wa=wsignin1.0&wtrealm=uri%3acpsmcd&wreply=https%3a%2f%2fqa-cpsmcd.ulscm.com%2f_trust%2fdefault.aspx&wctx=https%3a%2f%2fqa-cpsmcd.ulscm.com%2fsites%2fmcd1%2f_layouts%2fAuthenticate.aspx%3fSource%3d%252Fsites%252Fmcd1
-${INVALID_CREDENTIALS_PATH_CSV}        C:\\development\\robot-scripts\\mcd-revamp\\Data\\InvalidUsers.csv
-${VALID_CREDENTIALS_PATH_CSV}          C:\\development\\robot-scripts\\mcd-revamp\\Data\\Users.csv
+${INVALID_CREDENTIALS_PATH_CSV}        C:\\development\\robot-scripts\\mcd-revamp\\Data\\UserDetails\\InvalidUsers.csv
+${VALID_CREDENTIALS_PATH_CSV}          C:\\development\\robot-scripts\\mcd-revamp\\Data\\UserDetails\\Users.csv
 
 #Input Data
     #Valid Credentials
@@ -44,13 +44,27 @@ ${TUTORIAL_SKIP_MSG}                   Are you sure you want to skip the tutoria
 ${TUTORIAL_NEVER_MSG}                  Never show this again
 
 #Page Header Objects
+${PAGE_HEADER_BRAND}                   xpath=/html/body/div/div/div/nav[1]/div[1]/a
 ${PAGE_HEADER_SEARCHBOX}               xpath=//*[@id="searchtxt"]
 ${PAGE_HEADER_SAVED_SEARCH}            xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[2]
 ${PAGE_HEADER_HELP}                    xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[2]/li[2]
 ${PAGE_HEADER_USER}                    xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[2]/li[1]
 
 #Knowledge Hub Objects
-${KNOWLEDGE_HUB_SPEC_LIB}              xpath=//*[@id="0"]/div[1]
-${KNOWLEDGE_HUB_CHEM_MAT}              xpath=//*[@id="1"]/div[1]
+${KNOWLEDGE_HUB_SPEC_LIB}              Specification Library
+${KNOWLEDGE_HUB_PROM_PROD}             Promotional Products
+${KNOWLEDGE_HUB_FOOD_CS}               Food Contact Standards
+${KNOWLEDGE_HUB_CHEM_MAT}              Chemicals & Materials
+${KNOWLEDGE_HUB_LAWS_RULES}            Laws, Rules & Standards
+${KNOWLEDGE_HUB_AUDIT_PROG}            Audit Program
+${KNOWLEDGE_HUB_FAC_GOV}               Facility Governance
+${KNOWLEDGE_HUB_PROG_INFO}             Program Information
+${KNOWLEDGE_HUB_LABS_ONLY}             Labs Only
+${KNOWLEDGE_HUB_PROJ_MGT}              Project Management
+${KNOWLEDGE_HUB_FILE_TRANS}            File Transfer
+
+${KNOWLEDGE_HUB_SEARCH_DDOWN}         xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul
+                                      xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li[2]
+
 
 
