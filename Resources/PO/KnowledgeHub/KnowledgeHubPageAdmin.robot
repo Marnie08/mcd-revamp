@@ -11,9 +11,6 @@ Library  SeleniumLibrary
 *** Keywords ***
 Admin Knowledge Hub Redirection
     Sleep  45s
-    Wait Until Page Contains Element  css=#myCarousel > div
+    Wait Until Page Contains Element  xpath=//*[@id="0"]/div[1]
 
-Admin Sign Out
-    Click Link  css=#bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > li.dropdown.nav-useraccount > a
-    Click Link  Log out
-    Log  Admin User
+

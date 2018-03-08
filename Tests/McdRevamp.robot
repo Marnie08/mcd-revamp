@@ -55,7 +55,7 @@ Admin User should be able to login with valid ADMIN login credentials.
     [Tags]  TestAdmin  Sample1
     McdRevampApp.Login With Valid Login Credentials Input Data  ${ADMIN_USER}
     McdRevampApp.Redirect To Admin Knowledge Hub
-    McdRevampApp.Admin Logout
+    McdRevampApp.User Logout
 
 Regular User should be able to login with valid Regular User login credentials.
     [Documentation]  Test Suite 3
@@ -63,7 +63,7 @@ Regular User should be able to login with valid Regular User login credentials.
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Finish Tutorial
-    McdRevampApp.Regular User Logout
+    McdRevampApp.User Logout
 
 Regular User should be able to view "Main Tutorial Page" every successful login.
     [Documentation]  Test Suite 4
@@ -72,7 +72,7 @@ Regular User should be able to view "Main Tutorial Page" every successful login.
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Cancelling Non-display Of Tutorial
     McdRevampApp.Finish Tutorial
-    McdRevampApp.Regular User Logout
+    McdRevampApp.User Logout
 
 Regular User should be able to skip tutorial when skip button is clicked.
     [Documentation]  Test Suite 5
@@ -80,7 +80,7 @@ Regular User should be able to skip tutorial when skip button is clicked.
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     SplashScreen.Regular User Skipping Tutorial
-    McdRevampApp.Regular User Logout
+    McdRevampApp.User Logout
 
 #Main Tutorial Page should not be shown if "Never show this again" is ticked.
 #    [Documentation]  Test Suite 5
