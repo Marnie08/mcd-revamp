@@ -151,9 +151,10 @@ Cancelling Non-display Of Tutorial
     SplashScreen.Clicking Cancel
 
 Finish Tutorial
+    SplashScreen.Regular User Finishing Tutorial
+
+Skipping Tutorial
     SplashScreen.Regular User Skipping Tutorial
-
-
 
 
 

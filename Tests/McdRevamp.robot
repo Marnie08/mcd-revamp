@@ -74,6 +74,14 @@ Regular User should be able to view "Main Tutorial Page" every successful login.
     McdRevampApp.Finish Tutorial
     McdRevampApp.Regular User Logout
 
+Regular User should be able to skip tutorial when skip button is clicked.
+    [Documentation]  Test Suite 5
+    [Tags]  TutorialSkip  Sample2
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
+    McdRevampApp.Redirect To Tutorial
+    SplashScreen.Regular User Skipping Tutorial
+    McdRevampApp.Regular User Logout
+
 #Main Tutorial Page should not be shown if "Never show this again" is ticked.
 #    [Documentation]  Test Suite 5
 #    [Tags]  TutorialCancel  Sample2

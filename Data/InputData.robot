@@ -1,16 +1,16 @@
 *** Variables ***
 #Configuration
-${ENVIRONMENT}      qa
-${BROWSER}          IE
-&{URL}              qa=https://qalogin.ulscm.com/RPUI/cpsmcd/signin.aspx?wa=wsignin1.0&wtrealm=uri%3acpsmcd&wreply=https%3a%2f%2fqa-cpsmcd.ulscm.com%2f_trust%2fdefault.aspx&wctx=https%3a%2f%2fqa-cpsmcd.ulscm.com%2fsites%2fmcd1%2f_layouts%2fAuthenticate.aspx%3fSource%3d%252Fsites%252Fmcd1
-${INVALID_CREDENTIALS_PATH_CSV}  C:\\development\\robot-scripts\\mcd-revamp\\Data\\InvalidUsers.csv
-${VALID_CREDENTIALS_PATH_CSV}  C:\\development\\robot-scripts\\mcd-revamp\\Data\\Users.csv
-#&{URL}              qa=https://qa-cpsmcd.ulscm.com/sites/mcd1
+${ENVIRONMENT}                      qa
+${BROWSER}                          IE
+&{URL}                              qa=https://qalogin.ulscm.com/RPUI/cpsmcd/signin.aspx?wa=wsignin1.0&wtrealm=uri%3acpsmcd&wreply=https%3a%2f%2fqa-cpsmcd.ulscm.com%2f_trust%2fdefault.aspx&wctx=https%3a%2f%2fqa-cpsmcd.ulscm.com%2fsites%2fmcd1%2f_layouts%2fAuthenticate.aspx%3fSource%3d%252Fsites%252Fmcd1
+${INVALID_CREDENTIALS_PATH_CSV}     C:\\development\\robot-scripts\\mcd-revamp\\Data\\InvalidUsers.csv
+${VALID_CREDENTIALS_PATH_CSV}       C:\\development\\robot-scripts\\mcd-revamp\\Data\\Users.csv
 
 #Input Data
     #Valid Credentials
-&{ADMIN_USER}       Username=Clarence.campilan@ul.com  Password=Welcome1
-&{REGULAR_USER}     Username=cvss3user1@gmail.com  Password=Welcome1
+&{ADMIN_USER}                       Username=Clarence.campilan@ul.com  Password=Welcome1
+&{REGULAR_USER}                     Username=cvss3user1@gmail.com  Password=Welcome1
+&{QFL_QML_FACILITY_GOVERNANCE}      Username=michelle.tan@ul.com  Password=Welcome1
 
     #Invalid Credentials
 #&{UNREGISTERED_USER}  Username=mnaguas@yahoo.com  Password=TestPassword!  ExpectedErrorMessage=Login Failure: Unknown User.
@@ -46,3 +46,7 @@ ${TUTORIAL_DOT3}                       xpath=//*[@id="carousel-example-generic"]
 ${TUTORIAL_CANCEL_BTN}                 xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/p/a[1]
 ${TUTORIAL_FINISH_BTN}                 xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/p/a[2]
 ${TUTORIAL_NEVER_BOX}                  xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/label[2]/input
+${TUTORIAL_SKIP_BTN}                   xpath=//*[@id="carousel-example-generic"]/div/div[1]/div[2]/div[1]/a[1]
+${TUTORIAL_NEXT_BTN}                   xpath=//*[@id="carousel-example-generic"]/div/div[1]/div[2]/div[1]/a[2]
+${TUTORIAL_SKIP_MSG}                   Are you sure you want to skip the tutorial?
+${TUTORIAL_NEVER_MSG}                  Never show this again
