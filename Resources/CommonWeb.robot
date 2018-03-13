@@ -15,7 +15,7 @@ Library  SeleniumLibrary
 *** Keywords ***
 Begin Web Test
     Run Keyword If      '${BROWSER}' == 'chrome'      Open Chrome Browser to Page
-    ...     ELSE IF     '${BROWSER}' == 'Firefox'     Open Firefox Browser to Page
+    ...     ELSE IF     '${BROWSER}' == 'firefox'     Open Firefox Browser to Page
     ...     ELSE IF     '${BROWSER}' == 'IE'          Open Internet Explorer to Page
 
 End Web Test
@@ -34,11 +34,11 @@ Open Chrome Browser to Page
     Call method    ${chrome_options}    add_argument    --disable-popup-blocking
     Call Method    ${chrome_options}    add_argument    -incognito
     Call Method    ${chrome_options}    add_argument    --disable-infobars
+    Call Method    ${chrome_options}    add_argument    start-maximized
 
     Run Keyword If    os.sep == '/'    Create Webdriver    Chrome    my_alias    chrome_options=${chrome_options}    executable_path=/bin/chromedriver
     ...    ELSE    Create Webdriver    Chrome    my_alias    chrome_options=${chrome_options}
-    Maximize Browser Window
-
+    #Maximize Browser Window
 
 Open Internet Explorer to Page
     ${dc}   Evaluate    sys.modules['selenium.webdriver'].DesiredCapabilities.INTERNETEXPLORER  sys, selenium.webdriver

@@ -18,7 +18,6 @@ Resource  ./PO/KnowledgeHub/PageHeader.robot
 
 *** Variables ***
 
-
 *** Keywords ***
 ####################################################################################################################
 # Homepage Validation
@@ -72,7 +71,7 @@ Login With Valid Credentials
 ####################################################################################################################
 #Login with valid User Credentials - Any Type of User
 ####################################################################################################################
-#        CSV FILE
+#                                             CSV FILE
 ####################################################################################################################
 Login With Valid Login Credentials CSV File
     [Arguments]  ${Credentials}
@@ -85,7 +84,7 @@ Attempt Login CSV File
     SignIn.Click Submit
 
 #####################################################################################################################
-#        INPUT DATA
+#                                          INPUT DATA
 #####################################################################################################################
 Login With Valid Login Credentials Input Data
     [Arguments]  ${Credentials}
@@ -143,17 +142,29 @@ User Logout
 ####################################################################################################################
 #Tutorial
 ####################################################################################################################
+Redirect To Tutorial Via Help
+    PageHeader.Clicking McD Site Tutorial
+
 Redirect To Tutorial
     SplashScreen.Tutorial Page Redirection
 
 Cancelling Non-display Of Tutorial
     SplashScreen.Clicking Cancel
 
+Activating Never To See Tutorial
+    SplashScreen.Clicking Last Dot
+    SplashScreen.Clicking Checkbox
+    SplashScreen.Clicking Finish Button
+
 Finish Tutorial
-    SplashScreen.Regular User Finishing Tutorial
+    SplashScreen.User Finishing Tutorial
 
 Skipping Tutorial
-    SplashScreen.Regular User Skipping Tutorial
+    SplashScreen.User Skipping Tutorial
+
+Deactivating Never To See Tutorial
+    SplashScreen.Tutorial Page Redirection
+    SplashScreen.User Deactivating Tutorial Clicked
 
 
 

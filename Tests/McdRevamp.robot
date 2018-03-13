@@ -49,7 +49,9 @@ User should see correct error message with invalid login credentials
    # [Tags]  ValidCredentials
    # ${ValidLoginScenarios}  DataManager.Get Csv Data  ${VALID_CREDENTIALS_PATH_CSV}
    # McdRevampApp.Login With Valid Credentials  ${ValidLoginScenarios}
-
+#######################################################################################################################
+#                                              Admin User Test Suite
+#######################################################################################################################
 Admin User should be able to login with valid ADMIN login credentials.
     [Documentation]  Test Suite 3
     [Tags]  TestAdmin  Sample1
@@ -57,6 +59,9 @@ Admin User should be able to login with valid ADMIN login credentials.
     McdRevampApp.Redirect To Admin Knowledge Hub
     McdRevampApp.User Logout
 
+#######################################################################################################################
+#                                              Regular User Test Suite
+#######################################################################################################################
 Regular User should be able to login with valid Regular User login credentials.
     [Documentation]  Test Suite 3
     [Tags]  TestRegStd  Sample2
@@ -79,7 +84,51 @@ Regular User should be able to skip tutorial when skip button is clicked.
     [Tags]  TutorialSkip  Sample2
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
-    SplashScreen.Regular User Skipping Tutorial
+    SplashScreen.User Skipping Tutorial
+    McdRevampApp.User Logout
+
+#######################################################################################################################
+#                                    QFL/QML/Facility Governance Test Suite
+#######################################################################################################################
+QFL User should be able to login with valid Regular User login credentials.
+    [Documentation]  Test Suite 3
+    [Tags]  TestRegStd  SampleQFL
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${QFL_QML_FACILITY_GOVERNANCE}
+    McdRevampApp.Redirect To Tutorial
+    McdRevampApp.Finish Tutorial
+    McdRevampApp.User Logout
+
+QFL User should be able to view "Main Tutorial Page" every successful login.
+    [Documentation]  Test Suite 4
+    [Tags]  TutorialCancel  SampleQFL
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${QFL_QML_FACILITY_GOVERNANCE}
+    McdRevampApp.Redirect To Tutorial
+    McdRevampApp.Cancelling Non-display Of Tutorial
+    McdRevampApp.Finish Tutorial
+    McdRevampApp.User Logout
+
+QFL User should be able to skip tutorial when skip button is clicked.
+    [Documentation]  Test Suite 5
+    [Tags]  TutorialSkip  SampleQFL
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${QFL_QML_FACILITY_GOVERNANCE}
+    McdRevampApp.Redirect To Tutorial
+    SplashScreen.User Skipping Tutorial
+    McdRevampApp.User Logout
+
+QFL User should be able to have an option to de-activate Tutorial.
+    [Documentation]  Test Suite 5
+    [Tags]  TutorialDeactivate  SampleQFL
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${QFL_QML_FACILITY_GOVERNANCE}
+    McdRevampApp.Redirect To Tutorial
+    McdRevampApp.Activating Never To See Tutorial
+    McdRevampApp.User Logout
+
+QFL User should be able to activate tutorial via Knowledge Hub Help.
+    [Documentation]  Test Suite 5
+    [Tags]  TutorialDeactivate  SampleQFL
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${QFL_QML_FACILITY_GOVERNANCE}
+    McdRevampApp.Redirect To Tutorial Via Help
+    McdRevampApp.Deactivating Never To See Tutorial
     McdRevampApp.User Logout
 
 #Main Tutorial Page should not be shown if "Never show this again" is ticked.

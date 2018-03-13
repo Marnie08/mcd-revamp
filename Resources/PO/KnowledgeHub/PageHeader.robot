@@ -5,6 +5,7 @@ Documentation  This contains the Mc Donalds Knowledge Hub Application Test Suite
 #       Date:  February 28, 2018
 #       Revision History:
 #######################################################################################################################
+Library  SeleniumLibrary
 
 *** Variables ***
 
@@ -17,5 +18,16 @@ Validate Page Header Objects
 
 
 User Sign Out
+    Sleep  30s
     Click Link  ${PAGE_HEADER_USER}
     Click Link  Log out
+
+Clicking McD Site Tutorial
+    Sleep  30s
+    Click Link  ${PAGE_HEADER_HELP}
+    Click Link   McD Site Tutorial
+
+Regular User Search Box Validation
+    Wait Until Element Is Visible    ${PAGE_HEADER_SAVED_SEARCH}
+    Click Element
+
