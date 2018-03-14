@@ -64,10 +64,11 @@ Admin User should be able to login with valid ADMIN login credentials.
 #######################################################################################################################
 Regular User should be able to login with valid Regular User login credentials.
     [Documentation]  Test Suite 3
-    [Tags]  TestRegStd  Sample2
+    [Tags]  RegUserKH  Sample2
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Finish Tutorial
+    McdRevampApp.Validate Regular User Knowledge Hub Page
     McdRevampApp.User Logout
 
 Regular User should be able to view "Main Tutorial Page" every successful login.
@@ -81,7 +82,7 @@ Regular User should be able to view "Main Tutorial Page" every successful login.
 
 Regular User should be able to skip tutorial when skip button is clicked.
     [Documentation]  Test Suite 5
-    [Tags]  TutorialSkip  Sample2
+    [Tags]  TutorialRUSkip  Sample2
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     SplashScreen.User Skipping Tutorial

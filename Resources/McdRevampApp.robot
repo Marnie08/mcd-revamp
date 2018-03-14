@@ -11,9 +11,7 @@ Resource  ./PO/HomePage/LandingPage.robot
 Resource  ./PO/HomePage/SignIn.robot
 Resource  ./PO/HomePage/ForgotPassword.robot
 Resource  ./PO/TutorialPage/SplashScreen.robot
-Resource  ./PO/KnowledgeHub/KnowledgeHubPageRegU.robot
-Resource  ./PO/KnowledgeHub/KnowledgeHubPageAdmin.robot
-Resource  ./PO/KnowledgeHub/KnowledgeHubPageQQFG.robot
+Resource  ./PO/KnowledgeHub/KnowledgeHub.robot
 Resource  ./PO/KnowledgeHub/PageHeader.robot
 
 *** Variables ***
@@ -131,6 +129,17 @@ Valid Regular User Redirection
 ####################################################################################################################
 Redirect To Admin Knowledge Hub
     KnowledgeHubPageAdmin.Admin Knowledge Hub Redirection
+
+
+####################################################################################################################
+#Knowledge Hub - Regular User
+####################################################################################################################
+Validate Regular User Knowledge Hub Page
+    #PageHeader.Regular User Search Box Validation
+    KnowledgeHub.Regular User Knowledge Hub Validation
+
+
+
 
 ####################################################################################################################
 #Knowledge Hub Logout

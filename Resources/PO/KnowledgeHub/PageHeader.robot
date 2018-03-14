@@ -28,6 +28,12 @@ Clicking McD Site Tutorial
     Click Link   McD Site Tutorial
 
 Regular User Search Box Validation
-    Wait Until Element Is Visible    ${PAGE_HEADER_SAVED_SEARCH}
-    Click Element
+    Sleep  10s
+    Wait Until Element Is Visible    ${PAGE_HEADER_SEARCHBOX}
+    Click Element  ${PAGE_HEADER_SEARCHBOX}
+    Search Box List Items
+
+Search Box List Items
+    ${Search_Box_Items}  Get Element Count  //*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul
+    Log  ${Search_Box_Items}
 
