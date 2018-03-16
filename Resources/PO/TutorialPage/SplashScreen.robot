@@ -12,7 +12,7 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Tutorial Page Redirection
-    Sleep  45s
+    Sleep  60s
     Wait Until Element Is Visible  ${TUTORIAL_CAROUSEL}
 
 User Finishing Tutorial
@@ -37,6 +37,7 @@ User Skipping Tutorial
     Clicking Finish Button
 
 Get Picture And Dot Count
+    Sleep  15s
     ${PicCount}  Get Element Count  xpath=//*[@id="carousel-example-generic"]/div/div
     Log  ${PicCount}
     ${DotCount}  Get Element Count  xpath=//*[@id="carousel-example-generic"]/ol/li

@@ -47,12 +47,14 @@ ${TUTORIAL_NEVER_MSG}                  Never show this again
 #Page Header Objects
 ${PAGE_HEADER_BRAND}                   xpath=/html/body/div/div/div/nav[1]/div[1]/a
 ${PAGE_HEADER_SEARCHBOX}               xpath=//*[@id="searchtxt"]
+${PAGE_HEADER_MAGLENS}                 xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[1]/div[2]/button/i
 ${PAGE_HEADER_SAVED_SEARCH}            xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[2]
 ${PAGE_HEADER_HELP}                    xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[2]/li[2]/a
 ${PAGE_HEADER_USER}                    xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[2]/li[1]/a
 
 ${SEARCH_BOX_ALL}                      xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li[1]
 ${SEARCH_BOX_SPEC_LIB}                 xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li[2]
+${SEARCH_ITEM}                         Taiwan
 
 
 #Knowledge Hub Objects
@@ -72,6 +74,10 @@ ${KNOWLEDGE_HUB_ACTIVITY_FEED}         xpath=/html/body/div/div/div/div/div[2]/d
 ${KNOWLEDGE_HUB_ACTIVITY_FEED_ICON}    xpath=/html/body/div/div/div/div/div[2]/div[1]/div/div/div[1]/div
 ${KNOWLEDGE_HUB_RECENTLY_VIEWED}       xpath=/html/body/div/div/div/div/div[2]/div[3]/mcd-recently-viewed/div/div[1]
 ${KNOWLEDGE_HUB_RESOURCES}             xpath=/html/body/div/div/div/div/div[2]/div[3]/div/div/div[1]
+
+
+#Search Result Page
+${SEARCH_RESULT_TITLE}                 xpath=/html/body/div/div/div/div/div[2]/div[1]/div[1]/div[1]/h3
 
 
 

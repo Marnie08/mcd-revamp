@@ -59,6 +59,8 @@ Admin User should be able to login with valid ADMIN login credentials.
     McdRevampApp.Redirect To Admin Knowledge Hub
     McdRevampApp.User Logout
 
+Regular User should be able to view limited number of tiles on the Knowledge Hub Page.
+
 #######################################################################################################################
 #                                              Regular User Test Suite
 #######################################################################################################################
@@ -95,6 +97,17 @@ Regular User should be able to view limited number of tiles on the Knowledge Hub
     McdRevampApp.Finish Tutorial
     McdRevampApp.Validate Regular User Knowledge Hub Page
     McdRevampApp.User Logout
+
+Regular User should be able to search globally via search icon.
+    [Documentation]  Test Suite 5
+    [Tags]  Search  Sample2
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
+    McdRevampApp.Redirect To Tutorial
+    McdRevampApp.Finish Tutorial
+    McdRevampApp.Validate Regular User Knowledge Hub Page
+    McdRevampApp.Searching Globally Using Icon
+    McdRevampApp.User Logout
+
 
 
 #######################################################################################################################

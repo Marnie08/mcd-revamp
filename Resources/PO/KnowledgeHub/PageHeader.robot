@@ -44,12 +44,7 @@ Search Box List Items
     ${Search_Box_Items}  Get Element Count  xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li
     Log  ${Search_Box_Items}
     Run Keyword If  ${Search_Box_Items} > 1  Items On Search Box  ${Search_Box_Items}
-    ...  ELSE IF  ${Search_Box_Items} == 1  Get Options
     ...  ELSE IF  ${Search_Box_Items} == 0  Exit for loop
-
-Get Options
-    ${Label}  Get Text  xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li[1]
-    Log  ${Label}
 
 Items On Search Box
     [Arguments]  ${OptionCount}
@@ -59,5 +54,13 @@ Items On Search Box
     \   ${Label}  Get Text  xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li[${LISTINDEX}]
     \   Log  ${Label}
 
+Search Item Via Magnifying Lens
+    Click Element  ${PAGE_HEADER_SEARCHBOX}
+    Input Text  ${PAGE_HEADER_SEARCHBOX}  ${SEARCH_ITEM}
+    Click Element  ${PAGE_HEADER_MAGLENS}
 
+Search Item Via All Search Option
+    Click Element  ${PAGE_HEADER_SEARCHBOX}
+    Input Text  ${PAGE_HEADER_SEARCHBOX}  ${SEARCH_ITEM}
+    Click Element  ${SEARCH_BOX_ALL}
 

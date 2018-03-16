@@ -34,13 +34,14 @@ Tiles On The Page
     :FOR  ${TILEINDEX}  IN RANGE  1  ${ItemCount}+1
     \   Log  ${TILEINDEX}
     \   ${Label}  Get Text  xpath=//*[@id="${TILEINDEX}"]/div[1]/h5
-    \   Log  ${Label}
+    \   Log  ${Label}  does not exist.
 
 Regular User Validate Inactive Tiles
     @{TILES}  Create List  ${KNOWLEDGE_HUB_PROM_PROD}  ${KNOWLEDGE_HUB_FOOD_CS}  ${KNOWLEDGE_HUB_CHEM_MAT}  ${KNOWLEDGE_HUB_LAWS_RULES}  ${KNOWLEDGE_HUB_AUDIT_PROG}  ${KNOWLEDGE_HUB_FAC_GOV}  ${KNOWLEDGE_HUB_PROG_INFO}  ${KNOWLEDGE_HUB_LABS_ONLY}  ${KNOWLEDGE_HUB_PROJ_MGT}  ${KNOWLEDGE_HUB_FILE_TRANS}
 
     :FOR  ${UserTile}  IN  @{TILES}
     \  Page Should Not Contain Element  ${UserTile}
+    \  Log  ${UserTile}
 
 ####################################################################################################################
 #Left Panel
@@ -51,6 +52,14 @@ Left Side Panel
     :FOR  ${PanelItem}  IN  @{LEFT_PANEL}
     \  Page Should Contain Element  ${PanelItem}
 
+####################################################################################################################
+#Right Panel
+####################################################################################################################
+Right Side Panel
+    @{RIGHT_PANEL}  Create list  ${KNOWLEDGE_HUB_RECENTLY_VIEWED}  ${KNOWLEDGE_HUB_RESOURCES}
+
+    :FOR  ${RightItem}  IN  @{RIGHT_PANEL}
+    \  Page Should Contain Element  ${RightItem}
 
 
 
