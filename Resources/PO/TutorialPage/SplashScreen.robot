@@ -16,8 +16,14 @@ Tutorial Page Redirection
     Wait Until Element Is Visible  ${TUTORIAL_CAROUSEL}
 
 User Finishing Tutorial
-    Clicking Last Dot
+    Get Picture And Dot Count
     Clicking Finish Button
+
+Activating Never To See Tutorial
+    Get Picture And Dot Count
+    Clicking Checkbox
+    Clicking Finish Button
+
 
 Clicking Finish Button
     Wait Until Element Is Visible  ${TUTORIAL_FINISH_BTN}
@@ -30,13 +36,20 @@ User Skipping Tutorial
     Wait Until Page Contains  ${TUTORIAL_NEVER_MSG}
     Clicking Finish Button
 
+Get Picture And Dot Count
+    ${PicCount}  Get Element Count  xpath=//*[@id="carousel-example-generic"]/div/div
+    Log  ${PicCount}
+    ${DotCount}  Get Element Count  xpath=//*[@id="carousel-example-generic"]/ol/li
+    Run Keyword If  ${PicCount} == ${DotCount}  Clicking Last Dot  ${DotCount}
+
 Clicking Cancel
-    Clicking Last Dot
+    Get Picture And Dot Count
     Wait Until Element Is Visible  ${TUTORIAL_NEVER_BOX}
     Click Element  ${TUTORIAL_NEVER_BOX}
     Wait Until Element Is Visible  ${TUTORIAL_CANCEL_BTN}
     Click Element  ${TUTORIAL_CANCEL_BTN}
-    Clicking Last Dot
+    Get Picture And Dot Count
+
 
 User Deactivating Tutorial Clicked
     Wait Until Element Is Visible  ${TUTORIAL_SKIP_BTN}
@@ -53,8 +66,9 @@ Checkbox Clicked
     Checkbox Should Be Selected  ${TUTORIAL_NEVER_BOX}
 
 Clicking Last Dot
-    Wait Until Page Contains Element  ${TUTORIAL_DOT3}
-    Click Element  ${TUTORIAL_DOT3}
+    [Arguments]  ${LastDot}
+    Wait Until Page Contains Element  xpath=//*[@id="carousel-example-generic"]/ol/li[${LastDot}]
+    Click Element  xpath=//*[@id="carousel-example-generic"]/ol/li[${LastDot}]
 
 Clicking Checkbox
     Page Should Contain Checkbox  ${TUTORIAL_NEVER_BOX}

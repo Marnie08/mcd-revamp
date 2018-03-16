@@ -14,32 +14,46 @@ Library  SeleniumLibrary
 ####################################################################################################################
 Regular User Knowledge Hub Validation
     Tiles Count
-    Validate Active Tiles
+    Regular User Validate Inactive Tiles
 
 Tiles Count
+    [Documentation]  This keyword is for the determination of the tile count visible on the Knowledge Hub Page.
     ${TilesCount}  Get Element Count  //*[@id="myCarousel"]/div/div[1]
     Log  ${TilesCount}
-    Run Keyword If  ${TilesCount} > 0  Tiles On The Page  ${TilesCount}
+    Run Keyword If  ${TilesCount} == 0  Exit for loop
+    ...  ELSE IF  ${TilesCount} == 1  Get Tiles
+    ...  ELSE  ${TilesCount} > 1  Tiles On The Page  ${TilesCount}
+
+Get Tiles
+    ${Label}  Get Text  xpath=//*[@id="0"]/div[1]
 
 Tiles On The Page
+    [Documentation]  This keyword is for the identification of the visible tiles on the Knowledge Hub Page.
     [Arguments]  ${ItemCount}
     Log  ${ItemCount}
-    :FOR  ${INDEX}  IN RANGE  1  ${ItemCount}
-    \   Log  ${INDEX}
-    \   ${id}  Get Value  //*[@id="${INDEX}-1"]/div[1]/h5
-    \   Log  ${id}
+    :FOR  ${TILEINDEX}  IN RANGE  1  ${ItemCount}+1
+    \   Log  ${TILEINDEX}
+    \   ${Label}  Get Text  xpath=//*[@id="${TILEINDEX}"]/div[1]/h5
+    \   Log  ${Label}
 
-Validate Active Tiles
+Regular User Validate Inactive Tiles
     @{TILES}  Create List  ${KNOWLEDGE_HUB_PROM_PROD}  ${KNOWLEDGE_HUB_FOOD_CS}  ${KNOWLEDGE_HUB_CHEM_MAT}  ${KNOWLEDGE_HUB_LAWS_RULES}  ${KNOWLEDGE_HUB_AUDIT_PROG}  ${KNOWLEDGE_HUB_FAC_GOV}  ${KNOWLEDGE_HUB_PROG_INFO}  ${KNOWLEDGE_HUB_LABS_ONLY}  ${KNOWLEDGE_HUB_PROJ_MGT}  ${KNOWLEDGE_HUB_FILE_TRANS}
 
     :FOR  ${UserTile}  IN  @{TILES}
     \  Page Should Not Contain Element  ${UserTile}
 
+####################################################################################################################
+#Left Panel
+####################################################################################################################
+Left Side Panel
+    @{LEFT_PANEL}  Create List  ${KNOWLEDGE_HUB_ACTIVITY_FEED}  ${KNOWLEDGE_HUB_ACTIVITY_FEED_ICON}
+
+    :FOR  ${PanelItem}  IN  @{LEFT_PANEL}
+    \  Page Should Contain Element  ${PanelItem}
 
 
 
-#${tam}=    Get Matching Xpath Count    //table[@id='tableCols']/tbody/tr[@style='cursor: move; display: table-row;' or @style='cursor: move;']
-#    :FOR    ${i}    IN RANGE    1    ${tam}+1
-#    \    ${id}=    Get Element Attribute    //table[@id='tableCols']/tbody/tr[@style='cursor: move; display: table-row;' or @style='cursor: move;'][${i}]@id
+
+
 
 

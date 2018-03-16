@@ -135,10 +135,14 @@ Redirect To Admin Knowledge Hub
 #Knowledge Hub - Regular User
 ####################################################################################################################
 Validate Regular User Knowledge Hub Page
-    #PageHeader.Regular User Search Box Validation
     KnowledgeHub.Regular User Knowledge Hub Validation
+    PageHeader.Regular User Search Box Validation
+
+Compare Tile Content With Search List
 
 
+Get Tile Name
+    [Arguments]
 
 
 ####################################################################################################################
@@ -160,10 +164,8 @@ Redirect To Tutorial
 Cancelling Non-display Of Tutorial
     SplashScreen.Clicking Cancel
 
-Activating Never To See Tutorial
-    SplashScreen.Clicking Last Dot
-    SplashScreen.Clicking Checkbox
-    SplashScreen.Clicking Finish Button
+Activate Never To See Tutorial
+    SplashScreen.Activating Never To See Tutorial
 
 Finish Tutorial
     SplashScreen.User Finishing Tutorial

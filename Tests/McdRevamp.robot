@@ -68,7 +68,6 @@ Regular User should be able to login with valid Regular User login credentials.
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Finish Tutorial
-    McdRevampApp.Validate Regular User Knowledge Hub Page
     McdRevampApp.User Logout
 
 Regular User should be able to view "Main Tutorial Page" every successful login.
@@ -87,6 +86,16 @@ Regular User should be able to skip tutorial when skip button is clicked.
     McdRevampApp.Redirect To Tutorial
     SplashScreen.User Skipping Tutorial
     McdRevampApp.User Logout
+
+Regular User should be able to view limited number of tiles on the Knowledge Hub Page.
+    [Documentation]  Test Suite 5
+    [Tags]  KHValidation  Sample2
+    McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
+    McdRevampApp.Redirect To Tutorial
+    McdRevampApp.Finish Tutorial
+    McdRevampApp.Validate Regular User Knowledge Hub Page
+    McdRevampApp.User Logout
+
 
 #######################################################################################################################
 #                                    QFL/QML/Facility Governance Test Suite

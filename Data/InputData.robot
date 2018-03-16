@@ -33,8 +33,8 @@ ${FORGOT_PASSWORD_CLOSE}               xpath=//*[@id="forgotPasswordContainer"]/
 
 #Tutorial Splash Screen Objects
 ${TUTORIAL_CAROUSEL}                   xpath=//*[@id="carousel-example-generic"]/div
-${TUTORIAL_DOT1}
-${TUTORIAL_DOT2}
+#${TUTORIAL_DOT_GEN]                    xpath=//*[@id="carousel-example-generic"]/ol/li
+#${TUTORIAL_IMAGE_GEN]                  xpath=//*[@id="carousel-example-generic"]/div/div
 ${TUTORIAL_DOT3}                       xpath=//*[@id="carousel-example-generic"]/ol/li[3]
 ${TUTORIAL_CANCEL_BTN}                 xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/p/a[1]
 ${TUTORIAL_FINISH_BTN}                 xpath=//*[@id="carousel-example-generic"]/div/div[3]/div[2]/div[2]/p/a[2]
@@ -52,11 +52,7 @@ ${PAGE_HEADER_HELP}                    xpath=//*[@id="bs-example-navbar-collapse
 ${PAGE_HEADER_USER}                    xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[2]/li[1]/a
 
 ${SEARCH_BOX_ALL}                      xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li[1]
-
 ${SEARCH_BOX_SPEC_LIB}                 xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li[2]
-
-
-${SEARCH_BOX_LIST}
 
 
 #Knowledge Hub Objects
@@ -71,11 +67,12 @@ ${KNOWLEDGE_HUB_PROG_INFO}             Program Information
 ${KNOWLEDGE_HUB_LABS_ONLY}             Labs Only
 ${KNOWLEDGE_HUB_PROJ_MGT}              Project Management
 ${KNOWLEDGE_HUB_FILE_TRANS}            File Transfer
+${KNOWLEDGE_HUB_SEARCH_DDOWN}          xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul
+${KNOWLEDGE_HUB_ACTIVITY_FEED}         xpath=/html/body/div/div/div/div/div[2]/div[1]/div/div/div[1]/h3
+${KNOWLEDGE_HUB_ACTIVITY_FEED_ICON}    xpath=/html/body/div/div/div/div/div[2]/div[1]/div/div/div[1]/div
+${KNOWLEDGE_HUB_RECENTLY_VIEWED}       xpath=/html/body/div/div/div/div/div[2]/div[3]/mcd-recently-viewed/div/div[1]
+${KNOWLEDGE_HUB_RESOURCES}             xpath=/html/body/div/div/div/div/div[2]/div[3]/div/div/div[1]
 
-${KNOWLEDGE_HUB_SEARCH_DDOWN}         xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul
-
-
-#                                      //*[@id="0"]/div[1]/h5
 
 
 
