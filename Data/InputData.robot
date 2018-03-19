@@ -42,8 +42,9 @@ ${REGISTRATION_RADIO_NO1}              xpath=//*[@id="uniform-PlaceHolderMain_Re
 ${REGISTRATION_RADIO_NO2}              xpath=//*[@id="PlaceHolderMain_Register_mcdStaffChkNo"]
 ${REGISTRATION_NO_LABEL1}              xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[10]/td[1]/text()[2]
 ${REGISTRATION_NO_LABEL2}              xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[12]/td[1]/text()[2]
-
-
+${REGISTRATION_PASSWORD}               xpath=//*[@id="PlaceHolderMain_Register_Password"]
+${REGISTRATION_CONFIRM_PASSWORD}       xpath=//*[@id="PlaceHolderMain_Register_PasswordConfirm"]
+${REGISTRATION_SECURITY}               xpath=//*[@id="PlaceHolderMain_Register_SecurityQuestion"]
 
 
 #Tutorial Splash Screen Objects
