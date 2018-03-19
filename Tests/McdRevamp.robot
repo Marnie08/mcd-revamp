@@ -95,7 +95,7 @@ Regular User should be able to view limited number of tiles on the Knowledge Hub
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Finish Tutorial
-    McdRevampApp.Validate Regular User Knowledge Hub Page
+    McdRevampApp.Validate Regular User Knowledge Hub Category Page
     McdRevampApp.User Logout
 
 Regular User should be able to search globally via search icon.
@@ -104,12 +104,10 @@ Regular User should be able to search globally via search icon.
     McdRevampApp.Login With Valid Login Credentials Input Data  ${REGULAR_USER}
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Finish Tutorial
-    McdRevampApp.Validate Regular User Knowledge Hub Page
+    McdRevampApp.Validate Regular User Knowledge Hub Category Page
     McdRevampApp.Regular User Search Box Items Validation
     McdRevampApp.Searching Globally Using Icon
     McdRevampApp.User Logout
-
-
 
 #######################################################################################################################
 #                                    QFL/QML/Facility Governance Test Suite
@@ -144,7 +142,7 @@ QFL User should be able to have an option to de-activate Tutorial.
     [Tags]  TutorialDeactivate  SampleQFL
     McdRevampApp.Login With Valid Login Credentials Input Data  ${QFL_QML_FACILITY_GOVERNANCE}
     McdRevampApp.Redirect To Tutorial
-    McdRevampApp.Activating Never To See Tutorial
+    McdRevampApp.Activate Never To See Tutorial
     McdRevampApp.User Logout
 
 QFL User should be able to activate tutorial via Knowledge Hub Help.

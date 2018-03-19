@@ -15,3 +15,4 @@ Left Side Panel Validation
 
     :FOR  ${PanelItem}  IN  @{LEFT_PANEL}
     \  Page Should Contain Element  ${PanelItem}
+    \  Log  ${PanelItem}

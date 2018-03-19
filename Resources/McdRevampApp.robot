@@ -132,22 +132,19 @@ Valid Regular User Redirection
 #Knowledge Hub - Admin
 ####################################################################################################################
 Redirect To Admin Knowledge Hub
-    CategoryPage.Admin Knowledge Hub Redirection
+#    CategoryPage.Admin Knowledge Hub Redirection
 
 ####################################################################################################################
 #Knowledge Hub - Regular User
 ####################################################################################################################
 Validate Regular User Knowledge Hub Category Page
-    CategoryPage.Regular User Knowledge Hub Validation
+    CategoryPage.Regular User Category Page Validation
     LeftPanel.Left Side Panel Validation
     RightPanel.Right Side Panel Validation
     PageHeader.Validate Page Header Objects
 
 Compare Tile Content With Search List
 
-
-Get Tile Name
-    [Arguments]
 
 
 ####################################################################################################################

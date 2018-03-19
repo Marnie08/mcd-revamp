@@ -15,3 +15,4 @@ Right Side Panel Validation
 
     :FOR  ${RightItem}  IN  @{RIGHT_PANEL}
     \  Page Should Contain Element  ${RightItem}
+    \  Log  ${RightItem}
