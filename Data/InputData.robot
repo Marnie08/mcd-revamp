@@ -35,11 +35,13 @@ ${FORGOT_PASSWORD_CLOSE}               xpath=//*[@id="forgotPasswordContainer"]/
 ${REGISTRATION_EMAIL}                  xpath=//*[@id="PlaceHolderMain_Register_Email"]
 ${REGISTRATION_CONFIRM_EMAIL}          xpath=//*[@id="PlaceHolderMain_Register_EmailConfirm"]
 ${REGISTRATION_RADIO_YES1}             xpath=//*[@id="uniform-PlaceHolderMain_Register_elearningChkYes"]
-
-${REGISTRATION_YES_LABEL1}             xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[10]/td[1]/text()[1]
-${REGISTRATION_RADIO_NO1}              xpath=//*[@id="uniform-PlaceHolderMain_Register_elearningChkNo"]
-${REGISTRATION_NO_LABEL1}              xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[10]/td[1]/text()[2]
 ${REGISTRATION_RADIO_YES2}             xpath=//*[@id="uniform-PlaceHolderMain_Register_mcdStaffChkYes"]
+${REGISTRATION_YES_LABEL1}             xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[10]/td[1]/text()[1]
+${REGISTRATION_YES_LABEL2}             xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[12]/td[1]/text()[1]
+${REGISTRATION_RADIO_NO1}              xpath=//*[@id="uniform-PlaceHolderMain_Register_elearningChkNo"]
+${REGISTRATION_RADIO_NO2}              xpath=//*[@id="PlaceHolderMain_Register_mcdStaffChkNo"]
+${REGISTRATION_NO_LABEL1}              xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[10]/td[1]/text()[2]
+${REGISTRATION_NO_LABEL2}              xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[12]/td[1]/text()[2]
 
 
 
