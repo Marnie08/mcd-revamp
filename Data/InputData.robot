@@ -56,7 +56,6 @@ ${SEARCH_BOX_ALL}                      xpath=//*[@id="bs-example-navbar-collapse
 ${SEARCH_BOX_SPEC_LIB}                 xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul/li[2]
 ${SEARCH_ITEM}                         Taiwan
 
-
 #Knowledge Hub Objects
 ${KNOWLEDGE_HUB_SPEC_LIB}              Specification Library
 ${KNOWLEDGE_HUB_PROM_PROD}             Promotional Products
@@ -70,8 +69,10 @@ ${KNOWLEDGE_HUB_LABS_ONLY}             Labs Only
 ${KNOWLEDGE_HUB_PROJ_MGT}              Project Management
 ${KNOWLEDGE_HUB_FILE_TRANS}            File Transfer
 ${KNOWLEDGE_HUB_SEARCH_DDOWN}          xpath=//*[@id="bs-example-navbar-collapse-1"]/ul[1]/li[1]/form/div[2]/ul
+####Left Panel
 ${KNOWLEDGE_HUB_ACTIVITY_FEED}         xpath=/html/body/div/div/div/div/div[2]/div[1]/div/div/div[1]/h3
 ${KNOWLEDGE_HUB_ACTIVITY_FEED_ICON}    xpath=/html/body/div/div/div/div/div[2]/div[1]/div/div/div[1]/div
+####Right Panel
 ${KNOWLEDGE_HUB_RECENTLY_VIEWED}       xpath=/html/body/div/div/div/div/div[2]/div[3]/mcd-recently-viewed/div/div[1]
 ${KNOWLEDGE_HUB_RESOURCES}             xpath=/html/body/div/div/div/div/div[2]/div[3]/div/div/div[1]
 

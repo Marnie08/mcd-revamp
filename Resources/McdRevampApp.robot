@@ -11,9 +11,12 @@ Resource  ./PO/HomePage/LandingPage.robot
 Resource  ./PO/HomePage/SignIn.robot
 Resource  ./PO/HomePage/ForgotPassword.robot
 Resource  ./PO/TutorialPage/SplashScreen.robot
-Resource  ./PO/KnowledgeHub/KnowledgeHub.robot
+Resource  ./PO/KnowledgeHub/CategoryPage.robot
 Resource  ./PO/KnowledgeHub/PageHeader.robot
 Resource  ./PO/KnowledgeHub/SearchResult.robot
+Resource  ./PO/KnowledgeHub/LeftPanel.robot
+Resource  ./PO/KnowledgeHub/RightPanel.robot
+Resource  ./PO/KnowledgeHub/PageHeader.robot
 
 *** Variables ***
 
@@ -129,15 +132,16 @@ Valid Regular User Redirection
 #Knowledge Hub - Admin
 ####################################################################################################################
 Redirect To Admin Knowledge Hub
-    KnowledgeHubPageAdmin.Admin Knowledge Hub Redirection
-
+    CategoryPage.Admin Knowledge Hub Redirection
 
 ####################################################################################################################
 #Knowledge Hub - Regular User
 ####################################################################################################################
-Validate Regular User Knowledge Hub Page
-    KnowledgeHub.Regular User Knowledge Hub Validation
-    PageHeader.Regular User Search Box Validation
+Validate Regular User Knowledge Hub Category Page
+    CategoryPage.Regular User Knowledge Hub Validation
+    LeftPanel.Left Side Panel Validation
+    RightPanel.Right Side Panel Validation
+    PageHeader.Validate Page Header Objects
 
 Compare Tile Content With Search List
 
@@ -181,10 +185,12 @@ Deactivating Never To See Tutorial
 #######################################################################################################################
 #                               Search
 #######################################################################################################################
+Regular User Search Box Items Validation
+    PageHeader.Regular User Search Box Validation
+
 Searching Globally Using Icon
     PageHeader.Search Item Via Magnifying Lens
     SearchResult.Search Result Page Validation
-
 
 Searching Globally All Option
     PageHeader.Search Item Via All Search Option

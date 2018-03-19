@@ -105,6 +105,7 @@ Regular User should be able to search globally via search icon.
     McdRevampApp.Redirect To Tutorial
     McdRevampApp.Finish Tutorial
     McdRevampApp.Validate Regular User Knowledge Hub Page
+    McdRevampApp.Regular User Search Box Items Validation
     McdRevampApp.Searching Globally Using Icon
     McdRevampApp.User Logout
 

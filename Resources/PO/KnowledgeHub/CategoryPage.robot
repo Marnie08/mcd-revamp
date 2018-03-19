@@ -12,7 +12,7 @@ Library  SeleniumLibrary
 ####################################################################################################################
 #Knowledge Hub - Regular User
 ####################################################################################################################
-Regular User Knowledge Hub Validation
+Regular User Category Page Validation
     Tiles Count
     Regular User Validate Inactive Tiles
 
@@ -43,23 +43,6 @@ Regular User Validate Inactive Tiles
     \  Page Should Not Contain Element  ${UserTile}
     \  Log  ${UserTile}
 
-####################################################################################################################
-#Left Panel
-####################################################################################################################
-Left Side Panel
-    @{LEFT_PANEL}  Create List  ${KNOWLEDGE_HUB_ACTIVITY_FEED}  ${KNOWLEDGE_HUB_ACTIVITY_FEED_ICON}
-
-    :FOR  ${PanelItem}  IN  @{LEFT_PANEL}
-    \  Page Should Contain Element  ${PanelItem}
-
-####################################################################################################################
-#Right Panel
-####################################################################################################################
-Right Side Panel
-    @{RIGHT_PANEL}  Create list  ${KNOWLEDGE_HUB_RECENTLY_VIEWED}  ${KNOWLEDGE_HUB_RESOURCES}
-
-    :FOR  ${RightItem}  IN  @{RIGHT_PANEL}
-    \  Page Should Contain Element  ${RightItem}
 
 
 
