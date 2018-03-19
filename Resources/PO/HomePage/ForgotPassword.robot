@@ -9,6 +9,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 
+
 *** Keywords ***
 Forgot Password Validation
     Clicking Forgot Password

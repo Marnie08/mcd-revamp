@@ -31,6 +31,19 @@ ${FORGOT_PASSWORD_TEXTBOX}             xpath=//*[@id="PlaceHolderMain_Login2_For
 ${FORGOT_PASSWORD_SUBMIT_BTN}          xpath=//*[@id="PlaceHolderMain_Login2_ForgotPassword1_Submit"]
 ${FORGOT_PASSWORD_CLOSE}               xpath=//*[@id="forgotPasswordContainer"]/div[1]
 
+#Registration Form
+${REGISTRATION_EMAIL}                  xpath=//*[@id="PlaceHolderMain_Register_Email"]
+${REGISTRATION_CONFIRM_EMAIL}          xpath=//*[@id="PlaceHolderMain_Register_EmailConfirm"]
+${REGISTRATION_RADIO_YES1}             xpath=//*[@id="uniform-PlaceHolderMain_Register_elearningChkYes"]
+
+${REGISTRATION_YES_LABEL1}             xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[10]/td[1]/text()[1]
+${REGISTRATION_RADIO_NO1}              xpath=//*[@id="uniform-PlaceHolderMain_Register_elearningChkNo"]
+${REGISTRATION_NO_LABEL1}              xpath=//*[@id="PlaceHolderMain_Register_registerTblContainer"]/table/tbody/tr[10]/td[1]/text()[2]
+${REGISTRATION_RADIO_YES2}             xpath=//*[@id="uniform-PlaceHolderMain_Register_mcdStaffChkYes"]
+
+
+
+
 #Tutorial Splash Screen Objects
 ${TUTORIAL_CAROUSEL}                   xpath=//*[@id="carousel-example-generic"]/div
 #${TUTORIAL_DOT_GEN]                    xpath=//*[@id="carousel-example-generic"]/ol/li
