@@ -189,6 +189,7 @@ Searching Globally Using Icon
     PageHeader.Search Item Via Magnifying Lens
     SearchResult.Search Result Page Validation
 
+
 Searching Globally All Option
     PageHeader.Search Item Via All Search Option
 

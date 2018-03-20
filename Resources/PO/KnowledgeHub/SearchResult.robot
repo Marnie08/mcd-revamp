@@ -13,6 +13,7 @@ Library  SeleniumLibrary
 Search Result Page Validation
     Results Panel Validation
     Search Box Validation
+    Validation Of Search Results
     Compare Search Category And The Existing Category
 
 Results Panel Validation
@@ -26,24 +27,29 @@ Result Panel Partial Objects
     \  Page Should Contain Element  ${RPanelItem}
 
 Search Box Validation
-    ${CorrectKeyword}  Get Text  ${SEARCH_SEARCHBOX}
-    ${CorrectKeyword}  Convert To String  ${CorrectKeyword}
-    Should Be Equal  ${SEARCH_ITEM}  ${CorrectKeyword}
+    Sleep  45s
+    Wait Until Element Is Visible  ${SEARCH_SEARCHBOX}
+    ${SearchText}  Get Element Attribute  ${SEARCH_SEARCHBOX}  value
+    ${SearchText}  Convert To String  ${SearchText}
+    Should Be Equal  ${SEARCH_ITEM}  ${SearchText}
 
 Compare Search Category And The Existing Category
-    Page Should Contain Element  ${SEARCH_CATEGORY_REGUSER}
-    ${SearchCat}  Get Text  ${SEARCH_CATEGORY_REGUSER}
-    ${SearchCat}  Convert To String  ${SearchCat}
     Left Panel Validation
-    ${LeftCat}  Get Text  ${SEARCH_LEFT_CAT}
-    ${LeftCat}  Convert To String  ${LeftCat}
-    Should Be Equal  ${LeftCat}  ${SearchCat}
+    ${LeftCat}  Get Text   ${SEARCH_LEFT_CAT}
+    Should Be Equal As Strings  ${LeftCat}  ${KNOWLEDGE_HUB_SPEC_LIB}  ignore_case=True
 
 
 Left Panel Validation
     Page Should Contain Element  ${SEARCH_LEFT_ICON}
     Mouse Over  ${SEARCH_LEFT_ICON}
-    Page Should Contain Element  ${SEARCH_LEFT_CAT}
+    Wait Until Element Is Visible  ${SEARCH_LEFT_CAT}
+    Mouse Out  ${SEARCH_LEFT_ICON}
+    Sleep  45s
 
 
-Search Result
+Validation Of Search Results
+    Sleep  30s
+    Wait Until Element Is Visible  ${SEARCH_CATICON_REGUSER}
+    Click Element  ${SEARCH_CATICON_REGUSER}
+    Wait Until Element Is Visible  ${SEARCH_DRILLDOWN}
+    Click Element  ${SEARCH_DRILLDOWN}

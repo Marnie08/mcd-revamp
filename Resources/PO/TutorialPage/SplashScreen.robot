@@ -12,7 +12,7 @@ Library  SeleniumLibrary
 
 *** Keywords ***
 Tutorial Page Redirection
-    Sleep  60s
+    Sleep  100s
     Wait Until Element Is Visible  ${TUTORIAL_CAROUSEL}
 
 User Finishing Tutorial
