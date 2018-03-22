@@ -99,10 +99,10 @@ ${SEARCH_BACK}                         xpath=/html/body/div/div/div/div/div[2]/d
 ${SEARCH_SEARCHBOX}                    xpath=//*[@id="searchtxt"]
 ${SEARCH_SAVE}                         xpath=/html/body/div/div/div/div/div[2]/div[1]/div[1]/div[2]/div/div[2]/div/button/div[1]/span
 ${SEARCH_MAG_LENS}                     xpath=/html/body/div/div/div/div/div[2]/div[1]/div[1]/div[2]/div/div[1]/div/div[2]/button
-${SEARCH_CATEGORY_REGUSER}             xpath=//*[@id="accordiongroup-211-9469-tab"]
-${SEARCH_CATICON_REGUSER}              xpath=//*[@id="accordiongroup-211-7671-tab"]/h4/a/span/div/img
-${SEARCH_DRILLDOWN}                    xpath=//*[@id="accordiongroup-342-2428-tab"]/h4/a/span/span
-${SEARCH_ITEM1}                        xpath=//*[@id="accordiongroup-1970-1113-panel"]/div/uib-accordion/div/ul/li[1]/a
+${SEARCH_CATEGORY_REGUSER}             xpath=/html/body/div/div/div/div/div[2]/div[1]/div[2]/div[1]/div/div/ul/uib-accordion/div/li/div[1]/h4/a
+#${SEARCH_CATICON_REGUSER}              xpath=//*[@id="accordiongroup-231-8919-tab"]/h4/a
+${SEARCH_DRILLDOWN}                    xpath=/html/body/div/div/div/div/div[2]/div[1]/div[2]/div[1]/div/div/ul/uib-accordion/div/li/div[2]/div/uib-accordion/div/ul/li[2]/div[1]/h4/a/span/span
+#${SEARCH_ITEM1}                        xpath=//*[@id="accordiongroup-1970-1113-panel"]/div/uib-accordion/div/ul/li[1]/a
 ${SEARCH_LEFT_ICON}                    xpath=/html/body/div/div/div/div/div[1]/div/nav/ul/li/div/a/i
 ${SEARCH_LEFT_CAT}                     xpath=//*[@id="0"]
 

@@ -49,7 +49,10 @@ Left Panel Validation
 
 Validation Of Search Results
     Sleep  30s
-    Wait Until Element Is Visible  ${SEARCH_CATICON_REGUSER}
-    Click Element  ${SEARCH_CATICON_REGUSER}
+    Page Should Contain  ${KNOWLEDGE_HUB_SPEC_LIB}
+    Page Should Contain Element  xpath=//*[@id="global-search-result"]/uib-accordion/div/li
+    Wait Until Element Is Visible  ${SEARCH_CATEGORY_REGUSER}
+    Click Element  ${SEARCH_CATEGORY_REGUSER}
     Wait Until Element Is Visible  ${SEARCH_DRILLDOWN}
     Click Element  ${SEARCH_DRILLDOWN}
+
