@@ -24,11 +24,11 @@ Firefox Landing Page
 
 Load Landing Page
     Run Keyword If      '${BROWSER}' == 'chrome'      Chrome Landing Page
-    ...     ELSE IF     '${BROWSER}' == 'Firefox'     Firefox Landing Page
+    ...     ELSE IF     '${BROWSER}' == 'ff'     Firefox Landing Page
     ...     ELSE IF     '${BROWSER}' == 'IE'          Internet Explorer Landing Page
 
 Verify Loaded Landing Page
-    wait until page contains  ${LANDING_PAGE_BANNER}
+    Wait Until Page Contains  ${LANDING_PAGE_BANNER}
 
 Locate Landing Page Banners
     @{LANDING_ELEMENTS}  Create List  ${LANDING_PAGE_LABEL}  ${LANDING_PAGE_CONTACT}
@@ -38,4 +38,4 @@ Locate Landing Page Banners
 
 Look For Landing Element
     [Arguments]  ${PassedLandElement}
-    page should contain element  ${PassedLandElement}
+    Page Should Contain Element  ${PassedLandElement}

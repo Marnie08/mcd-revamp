@@ -15,7 +15,7 @@ Library  SeleniumLibrary
 *** Keywords ***
 Begin Web Test
     Run Keyword If      '${BROWSER}' == 'chrome'      Open Chrome Browser to Page
-    ...     ELSE IF     '${BROWSER}' == 'firefox'     Open Firefox Browser to Page
+    ...     ELSE IF     '${BROWSER}' == 'ff'     Open Firefox Browser to Page
     ...     ELSE IF     '${BROWSER}' == 'IE'          Open Internet Explorer to Page
 
 End Web Test
@@ -45,10 +45,11 @@ Open Internet Explorer to Page
     Set To Dictionary   ${dc}   ignoreProtectedModeSettings    ${True}
     Set To Dictionary   ${dc}   ie.forceCreateProcessApi       ${True}
     Set To Dictionary   ${dc}   ie.browserCommandLineSwitches=-private
-    Open Browser    about:blank  ${BROWSER}  desired_capabilitie=${dc}
+    Open Browser  about:blank  ${BROWSER}  desired_capabilitie=${dc}
 
 Open Firefox Browser to Page
-    Open Browser    about:blank  ${BROWSER}
+    Open Browser  about:blank  ${BROWSER}
+    Maximize Browser Window
 
 
 

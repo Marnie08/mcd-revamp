@@ -44,11 +44,10 @@ Left Panel Validation
     Mouse Over  ${SEARCH_LEFT_ICON}
     Wait Until Element Is Visible  ${SEARCH_LEFT_CAT}
     Mouse Out  ${SEARCH_LEFT_ICON}
-    Sleep  45s
+    Sleep  15s
 
 
 Validation Of Search Results
-    Sleep  30s
     Page Should Contain  ${KNOWLEDGE_HUB_SPEC_LIB}
     Page Should Contain Element  xpath=//*[@id="global-search-result"]/uib-accordion/div/li
     Wait Until Element Is Visible  ${SEARCH_CATEGORY_REGUSER}
